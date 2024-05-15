@@ -2,17 +2,15 @@ anchor_gen::generate_cpi_crate!("idl.json");
 
 anchor_lang::declare_id!("JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4");
 
-use solana_program::pubkey;
-
 // Temporarily redefined it until solution is found
 pub mod jupiter_override {
     use anchor_lang::InstructionData;
     use anchor_lang::{prelude::*, Discriminator};
-    use jupiter_amm_interface::Swap as InterfaceSwap;
+    // use jupiter_amm_interface::Swap as InterfaceSwap;
 
     #[derive(AnchorSerialize, Debug)]
     pub struct RoutePlanStep {
-        pub swap: InterfaceSwap,
+        pub swap: Pubkey,
         pub percent: u8,
         pub input_index: u8,
         pub output_index: u8,
