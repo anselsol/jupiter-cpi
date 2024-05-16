@@ -18,4 +18,4 @@ cpi = ["no-entrypoint"]
 [dependencies]
 anchor-gen = { git = "https://github.com/jup-ag/anchor-gen.git", rev = "dae4c216b883ea089432ff5c00d100f4f662fd07" }
 anchor-lang = "0.29.0"
-solana-program = "1.18.4"
+solana-program = "1.17.33"
